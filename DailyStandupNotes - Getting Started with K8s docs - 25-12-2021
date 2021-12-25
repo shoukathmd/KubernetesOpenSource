@@ -1,0 +1,23 @@
+To use https://github.com/kubernetes/website repository, you need the following installed locally:
+
+- npm
+- Go
+- Hugo (Extended version)
+Installation :
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install 
+
+- A container runtime, like Docker.
+
+git clone https://github.com/kubernetes/website.git
+cd website
+
+The Kubernetes website uses the Docsy Hugo theme. Even if you plan to run the website in a container, we strongly recommend pulling in the submodule and other development dependencies by running the following:
+
+# pull in the Docsy submodule
+git submodule update --init --recursive --depth 1
+
+Running the website using a container
+make container-image
+make container-serve
