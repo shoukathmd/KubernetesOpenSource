@@ -1,0 +1,23 @@
+Go lang Installation :
+curl -OL https://golang.org/dl/go1.17.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xvf go1.17.2.linux-amd64.tar.gz
+sudo nano ~/.profile
+source ~/.profile
+go version
+
+Install jq
+apt  install jq  # version 1.6-1ubuntu0.20.04.1
+
+
+Clone code in working directory :
+git clone https://github.com/kubernetes/kubernetes
+cd kubernetes
+make (building)
+
+
+To install a local version of etcd, run the following command in your Kubernetes working directory.
+
+./hack/install-etcd.sh
+This script will instruct you to make a change to your PATH. To make this permanent, add this to your .bashrc or login script:
+
+export PATH="$GOPATH/src/k8s.io/kubernetes/third_party/etcd:${PATH}"
