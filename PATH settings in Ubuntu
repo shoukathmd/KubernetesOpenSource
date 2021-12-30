@@ -1,0 +1,5 @@
+export GOPATH=/usr/local/go/bin
+export PATH=$GOPATH:$PATH
+export PATH="/opt/kubernetes/third_party/etcd:${PATH}"
+export CFSSL=/usr/local/bin
+export PATH="$CFSSL:${PATH}"
